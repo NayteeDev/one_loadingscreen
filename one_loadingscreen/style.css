@@ -1,0 +1,698 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html,
+body {
+    overflow: hidden;
+    color: #fefeff;
+}
+
+* {
+	font-family: Poppins;
+}
+
+body {
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    background-image: url(img/background.png);
+}
+
+.video-background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: -99;
+  }
+
+#Canvas {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    background-color: rgba(0,0,0,0);
+    overflow: hidden;
+    --web-view-name: Canvas;
+    --web-view-id: Canvas;
+    --web-scale-to-fit: true;
+    --web-scale-to-fit-type: width;
+    --web-enable-scale-up: true;
+    --web-scale-on-resize: true;
+    --web-center-vertically: true;
+    --web-enable-deep-linking: true;
+}
+#loadingscreen {
+    position: absolute;
+    width: 1943px;
+    height: 1175px;
+    left: -16px;
+    top: 0px;
+    overflow: visible;
+}
+#bg {
+    position: absolute;
+    width: 1943px;
+    height: 1175px;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+}
+
+.circles{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+}
+
+.circles li{
+position: absolute;
+display: block;
+list-style: none;
+width: 20px;
+height: 20px;
+background: rgba(255, 255, 255, 0.2);
+animation: animate 25s linear infinite;
+bottom: -150px;
+
+}
+
+.circles li:nth-child(1){
+left: 25%;
+width: 80px;
+height: 80px;
+animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+left: 10%;
+width: 20px;
+height: 20px;
+animation-delay: 2s;
+animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+left: 70%;
+width: 20px;
+height: 20px;
+animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+left: 40%;
+width: 60px;
+height: 60px;
+animation-delay: 0s;
+animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+left: 65%;
+width: 20px;
+height: 20px;
+animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+left: 75%;
+width: 110px;
+height: 110px;
+animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+left: 35%;
+width: 150px;
+height: 150px;
+animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+left: 50%;
+width: 25px;
+height: 25px;
+animation-delay: 15s;
+animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+left: 20%;
+width: 15px;
+height: 15px;
+animation-delay: 2s;
+animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+left: 85%;
+width: 150px;
+height: 150px;
+animation-delay: 0s;
+animation-duration: 11s;
+}
+
+a {
+    color: inherit;
+    text-decoration: none !important;
+}
+
+p {
+    font-size: 40px;
+    margin: 0;
+    letter-spacing: 3px;
+}
+
+img[src=""] {
+    display: none;
+}
+
+.team-input {
+    position: fixed;
+    left: 70%;
+    top: 30%;
+}
+
+.team-text {
+    position: fixed;
+    left: 76.5%;
+    top: 29.5%;
+    font-size: 160%;
+}
+
+.img {
+    border-radius: 50%;
+    width: 83px;
+    height: 83px;
+}
+
+.balken-right-input-titel {
+    position: fixed;
+    top: 16.5%;
+    left: 75.7%;
+}
+
+.clockStyle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    position: fixed;
+    left: 50%;
+    top: 55%;
+}
+
+.loadbar {
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+    height: 20px;
+
+    margin-left: 2px;
+    margin-right: 3px;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    overflow: hidden;
+     
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: block;
+}
+
+.progressBar {
+    width: 10%;
+    background-color: rgb(124, 124, 124);
+    height: 20px;
+    position: absolute;
+    left: 10%;
+}
+
+.discord-banner {
+    font-family: 'Montserrat', sans-serif;
+    position: fixed;
+    /* or absolute */
+    top: 19%;
+    left: 21%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    animation: fadein 3s;
+    -moz-animation: fadein 3s;
+    /* Firefox */
+    -webkit-animation: fadein 3s;
+    /* Safari and Chrome */
+    -o-animation: fadein 3s;
+    /* Opera */
+}
+
+.discord-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    position: fixed;
+    text-align: left;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+    /* or absolute */
+    top: 30%;
+    left: 21%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    animation: fadein 3s;
+    -moz-animation: fadein 3s;
+    /* Firefox */
+    -webkit-animation: fadein 3s;
+    /* Safari and Chrome */
+    -o-animation: fadein 3s;
+    /* Opera */
+}
+
+.discord-widget {
+    font-family: 'Montserrat', sans-serif;
+    position: fixed;
+    /* or absolute */
+    top: 60%;
+    left: 21%;
+    /* shadow */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    animation: fadein 3s;
+    -moz-animation: fadein 3s;
+    /* Firefox */
+    -webkit-animation: fadein 3s;
+    /* Safari and Chrome */
+    -o-animation: fadein 3s;
+    /* Opera */
+}
+
+.balken-left {
+    font-family: 'Montserrat', sans-serif;
+    position: fixed;
+    /* or absolute */
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    animation: fadein 3s;
+    -moz-animation: fadein 3s;
+    /* Firefox */
+    -webkit-animation: fadein 3s;
+    /* Safari and Chrome */
+    -o-animation: fadein 3s;
+    /* Opera */
+}
+
+.balken-left-top {
+    font-family: 'Montserrat', sans-serif;
+    position: fixed;
+    /* or absolute */
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    animation: fadein 3s;
+    -moz-animation: fadein 3s;
+    /* Firefox */
+    -webkit-animation: fadein 3s;
+    /* Safari and Chrome */
+    -o-animation: fadein 3s;
+    /* Opera */
+}
+
+.balken-right {
+    font-family: 'Montserrat', sans-serif;
+    position: fixed;
+    /* or absolute */
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    animation: fadein 3s;
+    -moz-animation: fadein 3s;
+    /* Firefox */
+    -webkit-animation: fadein 3s;
+    /* Safari and Chrome */
+    -o-animation: fadein 3s;
+    /* Opera */
+}
+
+.balken-right-top {
+    font-family: 'Montserrat', sans-serif;
+    position: fixed;
+    /* or absolute */
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    animation: fadein 3s;
+    -moz-animation: fadein 3s;
+    /* Firefox */
+    -webkit-animation: fadein 3s;
+    /* Safari and Chrome */
+    -o-animation: fadein 3s;
+    /* Opera */
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein {
+    /* Firefox */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein {
+    /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadein {
+    /* Opera */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.songname {
+    position: absolute;
+    top: 2%;
+    left: 34.5%;
+    animation: fadein 3s;
+    -moz-animation: fadein 3s;
+    /* Firefox */
+    -webkit-animation: fadein 3s;
+    /* Safari and Chrome */
+    -o-animation: fadein 3s;
+    /* Opera */
+}
+
+.songimg {
+    position: absolute;
+    top: -45%;
+    left: -18%;
+    scale: 0.5, 0.5;
+    animation: fadein 3s;
+    -moz-animation: fadein 3s;
+    /* Firefox */
+    -webkit-animation: fadein 3s;
+    /* Safari and Chrome */
+    -o-animation: fadein 3s;
+    /* Opera */
+}
+        
+canvas {
+    width: 100%;
+    height: 100%;
+    z-index: -999999999;
+}
+        
+[class^="letter"] {
+    -webkit-transition: opacity 3s ease;
+    -moz-transition: opacity 3s ease;
+    transition: opacity 3s ease;
+}
+        
+body .vertical-centered-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+body .vertical-centered-box:after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+}
+
+body .vertical-centered-box .content {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+}
+        
+body .vertical-centered-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+body .vertical-centered-box:after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+}
+
+body .vertical-centered-box .content {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.hallo {
+    float: right;
+    top: 90%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    animation: fadein 3s;
+    -moz-animation: fadein 3s;
+    /* Firefox */
+    -webkit-animation: fadein 3s;
+    /* Safari and Chrome */
+    -o-animation: fadein 3s;
+    /* Opera */
+}
+
+.letter-0 {
+    transition-delay: 0.2s;
+}
+        
+.letter-1 {
+    transition-delay: 0.4s;
+}
+        
+.letter-2 {
+    transition-delay: 0.6s;
+}
+        
+.letter-3 {
+    transition-delay: 0.8s;
+}
+        
+.letter-4 {
+    transition-delay: 1.0s;
+}
+        
+.letter-5 {
+    transition-delay: 1.2s;
+}
+        
+.letter-6 {
+    transition-delay: 1.4s;
+}
+        
+.letter-7 {
+    transition-delay: 1.6s;
+}
+        
+.letter-8 {
+    transition-delay: 1.8s;
+}
+        
+.letter-9 {
+    transition-delay: 2.0s;
+}
+        
+.letter-10 {
+    transition-delay: 2.2s;
+}
+        
+.letter-11 {
+    transition-delay: 2.4s;
+}
+        
+.letter-12 {
+    transition-delay: 2.6s;
+}
+        
+.letter-13 {
+    transition-delay: 2.8s;
+}
+        
+.letter-14 {
+    transition-delay: 3.0s;
+}
+        
+.letter-15 {
+    transition-delay: 3.2s;
+}
+
+/* Music Player */
+
+.music-container {
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 15px;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    padding: 20px 30px;
+    position: absolute;
+    left: 39%;
+    top: 35%;
+    margin: 100px 0;
+    z-index: 10;
+  }
+  
+  .img-container {
+    position: relative;
+    width: 110px;
+  }
+  
+  .img-container::after {
+    content: '';
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, 50%);
+  }
+  
+  .img-container img {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 110px;
+    width: inherit;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: rotate 3s linear infinite;
+  
+    animation-play-state: paused;
+  }
+  
+  .music-container.play .img-container img {
+    animation-play-state: running;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .action-btn {
+    background-color: rgba(0,0,0,0.0);
+    border: 0;
+    color: rgb(124, 124, 124);
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 20px;
+  }
+  
+  .action-btn.action-btn-big {
+    color: rgb(124, 124, 124);
+    font-size: 30px;
+  }
+  
+  .action-btn:focus {
+    outline: 0;
+  }
+  
+  .music-info {
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: calc(100% - 40px);
+    padding: 10px 10px 10px 150px;
+    opacity: 0;
+    transform: translateY(0%);
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+    z-index: 0;
+  }
+  
+  .music-container.play .music-info {
+    opacity: 1;
+    transform: translateY(-100%);
+  }
+  
+  .music-info h4 {
+    margin: 0;
+  }
+  
+  .progress-container {
+    background: rgba(0,0,0,0.5);
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    height: 4px;
+    width: 100%;
+  }
+  
+  .progress {
+    background-color: rgb(124, 124, 124);
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+  }
+  

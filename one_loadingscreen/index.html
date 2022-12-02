@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=WINDOWS-1252">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="video-background">
+        <iframe class="videoContainer__video" height="150%" width="150%" src="" frameborder="0"></iframe>
+   </div>
+    <div id="particles-background" class="vertical-centered-box"></div>
+    <div id="particles-foreground" class="vertical-centered-box"></div>
+    <canvas width="715" height="974"></canvas>
+
+    <!--  Balken  -->
+
+    <div class="balken-left" unselectable="on">
+        <img src="img/left.png" style="opacity: 0.5;">
+    </div>
+    <div class="balken-left-top" unselectable="on">
+        <img src="img/left-top.png" style="opacity: 0.6;">
+    </div>
+    <!-- <div class="balken-middle" unselectable="on">
+        <img src="img/middle.png" style="opacity: 0.5;">
+    </div>
+    <div class="balken-middle-top" unselectable="on">
+    <img src="img/middle-top.png" style="opacity: 0.6;">
+    </div> -->
+    <div class="balken-right" unselectable="on">
+        <img src="img/right.png" style="opacity: 0.5;">
+    </div>
+    <div class="balken-right-top" unselectable="on">
+    <img src="img/right-top.png" style="opacity: 0.6;">
+    </div>
+
+    <!-- Uhr/Clock -->
+
+    <div id="clockDisplay" class="clockStyle">--:--:-- PM</div>
+
+    <!--  Balken-left-input  -->
+
+    <div class="discord-banner">
+        <img src="https://discordapp.com/api/guilds/954778473275215933/widget.png?style=banner2" alt="">
+    </div>
+    <div class="discord-widget">
+        <iframe src="https://discord.com/widget?id=954778473275215933&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    </div>
+    <div class="discord-text">
+        Du willst mehr von unserem Server sehen?
+        <br>
+        <br>
+        Worauf wartest du?
+        <br>
+        Trete jetzt unserem Discord Server bei!
+    </div>
+
+    <!--  Balken-right-input  -->
+
+    <div class="balken-right-input-titel">
+        <p>Team</p>
+    </div>
+
+    <div class="team-input">
+        <img src="img/oneimage.png" class="img">
+        <br>
+        <br>
+        <img src="img/oneimage.png" class="img">
+        <br>
+        <br>
+        <img src="img/oneimage.png" class="img">
+        <br>
+        <br>
+        <img src="img/oneimage.png" class="img">
+    </div>
+
+    <div class="team-text">
+        ONEIMAGE
+        <br>
+        Projektleitung
+        <br>
+        <br>
+        ONEIMAGE
+        <br>
+        Projektleitung
+        <br>
+        <br>
+        ONEIMAGE
+        <br>
+        Projektleitung
+        <br>
+        <br>
+        ONEIMAGE
+        <br>
+        Projektleitung
+    </div>
+
+    <!--  Loading-Bar  -->
+
+    <div class="loadbar">
+        <div class="progressBar"></div>
+    </div>
+
+    <!-- Music-Player - Credits to: https://www.youtube.com/watch?v=QTHRWGn_sJw -->
+
+    <div class="music-container" id="music-container">
+      <div class="music-info">
+        <h4 id="title"></h4>
+        <div class="progress-container" id="progress-container">
+          <div class="progress" id="progress"></div>
+        </div>
+      </div>
+
+      <audio src="music/Allein-Babymoench.ogg" id="audio"></audio>
+
+      <div class="img-container">
+        <img src="images/Allein-Babymoench.jpg" alt="music-cover" id="cover" />
+      </div>
+      <div class="navigation">
+        <button id="prev" class="action-btn">
+          <i class="fas fa-backward"></i>
+        </button>
+        <button id="play" class="action-btn action-btn-big">
+          <i class="fas fa-play"></i>
+        </button>
+        <button id="next" class="action-btn">
+          <i class="fas fa-forward"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="time.js" type="text/javascript"></script>
+    <script src="player.js"></script>
+    <script src="loadbar.js"></script>
+    
+</body>
+</html>
